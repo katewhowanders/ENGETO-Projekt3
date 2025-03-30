@@ -1,0 +1,76 @@
+/* RESPONZIVITA */
+
+/* max-width záleží na počtu položek v menu */
+
+@media (max-width: 600px) {
+  header {
+    position: relative;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: #fcfcf4;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #4d4c4c;
+    font-size: 23px;
+  }
+
+  header nav li {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* chceme, aby při roztažení stránky bylo stále viditelné menu - aktuálně přebito display: none u nav do šířky 600px */
+
+@media (min-width: 600px) {
+  header nav {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .about-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 20px;
+  }
+  .about-text {
+    width: 100%;
+  }
+
+  .about-image {
+    background-image: url(./images/ben_lomond.jpg);
+    background-position: center 80%;
+    flex-basis: 400px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    /* height: 400px; */
+    width: 100%;
+  }
+
+  .registration-form {
+    height: 100vh;
+  }
+}

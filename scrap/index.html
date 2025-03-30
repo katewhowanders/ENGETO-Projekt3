@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Katerina Hlavicova -->
+    <!-- hlavicova.katerina@gmail.com -->
+    <!-- Katerina Hlavicova -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/87b271601a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="query.css" />
+    <title>Projekt 3</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo_travel.jpg" alt="logo" />
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+        <!-- <i class="fa-solid fa-xmark"></i> -->
+      </div>
+
+      <div class="switcher-box">
+        <span class="switcher-description">
+          <p>Light Mode</p>
+          <i class="fa-solid fa-sun"></i>
+          <!-- <i class="fa-solid fa-moon"></i> -->
+        </span>
+
+        <!-- Rounded switch - překlikávací boxík -->
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    <main>
+      <!-- ABOUT SECTION -->
+      <section class="about">
+        <div class="about-wrapper">
+          <div class="about-text">
+            <h2>Pár slov na úvod</h2>
+            <p>
+              Někdy na cestách, někdy na mikrodobrodružství v našem regionu.
+              Trávili jsme hodně času na různých toulkách, na horách, na
+              plachetnici na moři a jezerech, poznávali různé kultury, kochali
+              se architekturou měst. Teď s naším batoletem jsme trochu
+              zpomalili, ale dobrodružství zažíváme pořád. Výlety jsou časově
+              stejně dlouhé, ale vzdálenosti kratší, zážitků sna dještě více.
+              Snažíme se ukázat, že i s akčním dítětem lze poznávat kus naší
+              krásné země, ale i světa, jen v jiném tempu. Máme moc rádi české
+              hory v pohraničí, jižní Moravu, skandinávské země a jižanskou
+              otevřenost k dětem, kde jsou samá dobrá hřiště na každém kroku, v
+              centru měst, ale i na zapadlých nádražích. Baví nás objevovat
+              místa, kde se s dětmi ve společnosti a veřejném prostoru počítá.
+            </p>
+          </div>
+          <div class="about-image"></div>
+        </div>
+      </section>
+
+      <!-- GALLERY SECTION -->
+      <section class="gallery">
+        <div class="gallery-wrapper">
+          <div class="gallery-container">
+            <img src="./images/lofoty.jpg" alt="Lofoty" />
+          </div>
+          <div class="gallery-container">
+            <img src="./images/ronda.jpg" alt="Ronda" />
+          </div>
+          <div class="gallery-container">
+            <img
+              src="./images/stockholm_archipelago.JPG"
+              alt="Stockholmské souostroví"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM SECTION -->
+      <section class="registration-form">
+        <p>
+          Chceš mít pravidelný přísun informací a tipů z našich cest? Pokud ano,
+          neváhej se registrovat k pravidelnému odběru newsletteru.
+        </p>
+        <h2>Registrační formulář</h2>
+
+        <!-- Notifikace -->
+        <p class="notif-name">Vyplňte prosím své jméno.</p>
+        <p class="notif-email">Vyplňte prosím svůj email.</p>
+        <p class="notif-password">Vyplňte prosím heslo.</p>
+        <p class="notif-confirm-password">Vyplňte prosím znovu heslo.</p>
+
+        <!-- Formulář -->
+        <form>
+          <input type="text" placeholder="Jméno *" class="full-name" /><br />
+          <input type="email" placeholder="Email *" class="email" /><br />
+          <input type="password" placeholder="Heslo *" class="password" /><br />
+          <input
+            type="password"
+            placeholder="Potvrďte heslo *"
+            class="confirm-password"
+          /><br />
+          <p class="result-text"></p>
+          <input type="submit" class="Odeslat" />
+        </form>
+      </section>
+      <!-- FOOTER -->
+      <footer>© 2025 - Roadside Travel. All rights reserved.</footer>
+    </main>
+
+    <a href="#nav" class="top-page"
+      ><i class="fa-solid fa-circle-arrow-up"></i
+    ></a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

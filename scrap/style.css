@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: black;
+  --secondary-color: #6c757d;
+  --nav-color: #4d4c4c;
+  --background-color-header: #fcfcf4;
+  --background-color: white;
+  --text-color: black;
+  --switcher-color: rgb(76, 76, 76);
+}
+
+/* Barvy pro dark mode */
+[data-theme="dark"] {
+  --primary-color: rgb(247, 247, 247);
+  --secondary-color: #d8d8d8;
+  --nav-color: #ebe8e8;
+  --background-color-header: #383838;
+  --background-color: black;
+  --text-color: rgb(235, 235, 235);
+  --switcher-color: rgb(156, 156, 156);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/**********************/
+/* HEADER */
+/**********************/
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--background-color-header);
+  height: 70px;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 140px;
+  margin-left: 20px;
+}
+
+nav {
+  margin-right: 30px;
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--nav-color);
+  font-family: Quicksand;
+}
+
+.menu-icon {
+  display: none;
+  margin-right: 30px;
+}
+
+/**********************/
+/* ABOUT SECTION */
+/**********************/
+
+.about-wrapper {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  padding: 48px 0;
+  gap: 20px;
+}
+
+.about-image {
+  background-image: url(./images/ben_lomond.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  height: 400px;
+  width: 50%;
+}
+
+.about-text {
+  width: 50%;
+  text-align: justify;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+.about-text h2 {
+  margin-bottom: 32px;
+  font-family: "Roboto";
+}
+
+/**********************/
+/* GALLERY SECTION */
+/**********************/
+
+.gallery-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.gallery-container {
+  max-width: 30%;
+  flex: 1 1 30%;
+  position: relative;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.4s;
+}
+
+.gallery-container:hover img {
+  transform: scale(1.1);
+}
+
+/**********************/
+/* FOOTER */
+/**********************/
+
+footer {
+  color: var(--nav-color);
+  font-family: Quicksand;
+  background-color: var(--background-color-header);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+/**********************/
+/* LIGHT A DARK MODE */
+/*********************/
+
+.switcher-box {
+  display: flex;
+  align-items: center;
+}
+
+.switcher-description p {
+  color: var(--nav-color);
+  font-family: Quicksand;
+}
+
+.switcher-description {
+  display: flex;
+  align-items: center;
+}
+
+.switcher-description p,
+.switcher-description i {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+/* PŘEKLIKÁVACÍ TLAČÍTKO PRO LIGHT A DARK MODE */
+/* zkopírováno z https://www.w3schools.com/howto/howto_css_switch.asp */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  /* width: 60px;
+  height: 34px; */
+  width: 30px;
+  height: 17px;
+  margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switcher-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  /* height: 26px;
+  width: 26px; */
+  height: 13px;
+  width: 13px;
+  /* left: 4px;
+  bottom: 4px; */
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--switcher-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--switcher-color);
+}
+
+input:checked + .slider:before {
+  /* -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); */
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/**********************/
+/* FORMULÁŘ */
+/**********************/
+
+.notif-name,
+.notif-email,
+.notif-password,
+.notif-confirm-password {
+  display: none;
+}
+
+.registration-form {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Roboto";
+}
+
+.registration-form p {
+  padding-bottom: 24px;
+}
+
+.registration-form h2 {
+  padding-bottom: 24px;
+}
+
+.full-name,
+.email,
+.password,
+.confirm-password {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--nav-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  outline: none;
+  color: var(--primary-color);
+  text-align: center;
+}
+form input[type="submit"] {
+  background-color: var(--switcher-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+/* Classy pro JavaScript - kontrola hesel */
+.valid {
+  color: greenyellow;
+}
+
+.invalid {
+  color: red;
+}
+
+/********************
+/*  TLAČÍTKO NAHORU */
+/*******************/
+
+.top-page {
+  text-decoration: none;
+  background: rgb(136, 180, 209);
+  padding: 5px 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  color: var(--background-color-header);
+  font-size: 2.5em;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  display: none;
+  /* vycentrování */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
